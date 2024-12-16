@@ -1,0 +1,82 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* FounderPro Button */
+  .founderpro-button {
+    padding: 10px 15px;
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .founderpro-button:hover {
+    background-color: #45a049;
+    color: white;
+    border-color: #45a049;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #d9ffd9;
+  }
+  
+  /* Highlight Sign Up Link */
+  .signup-link {
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-link:hover {
+    background-color: white;
+    color: #4CAF50;
+    border-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .navbar-links li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
