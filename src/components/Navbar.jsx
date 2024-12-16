@@ -11,7 +11,7 @@ const Navbar = () => {
 
       {/* Right Section */}
       <ul className="navbar-links">
-        <li><a href="#leaderboard">Leaderboard</a></li>
+        <li><a href="/">Leaderboard</a></li>
         <li><a href="#competitions">Competitions</a></li>
         <li><a href="#signup" className="signup-link">Sign Up</a></li>
       </ul>

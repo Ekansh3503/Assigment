@@ -1,110 +1,61 @@
 .performance-box {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .performance-box h2 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  
-  /* Grid Layout */
+  max-width: 100%; /* Allow full width within the container */
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.performance-box h2 {
+  font-size: 24px;
+  color: #4CAF50;
+  /* margin-bottom: 15px; */
+}
+
+/* Grid Layout for Performance Items */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 items per row */
+  /* gap: 10px; */
+}
+
+.performance-item {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.performance-item:hover {
+  background: #e8f5e9;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Optional: Remove Responsive Adjustments */
+@media screen and (max-width: 768px) {
   .performance-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 items per row */
   }
-  
-  /* Each Item in the Grid */
-  .performance-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    transition: background 0.3s ease;
-  }
-  
-  .performance-item:hover {
-    background: #e8f5e9;
-  }
-  
-  .performance-item .label {
-    display: block;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-  }
-  
-  .performance-item .value {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .performance-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .performance-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .performance-box {
-    max-width: 300px;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .performance-box h2 {
-    font-size: 18px;
-    color: #4CAF50;
-    margin-bottom: 15px;
-  }
-  
-  /* Grid Layout for Performance Items */
+}
+
+@media screen and (max-width: 480px) {
   .performance-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 items per row */
   }
-  
-  .performance-item {
-    background: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s;
-  }
-  
-  .performance-item:hover {
-    background: #e8f5e9;
-  }
-  
-  .label {
-    font-size: 12px;
-    color: #666;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .value {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-  }
+}
+
   

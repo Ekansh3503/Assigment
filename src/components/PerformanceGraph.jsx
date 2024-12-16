@@ -18,7 +18,7 @@ const PerformanceGraph = ({ data, traderName }) => {
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" label={{ value: "Equity Progression", position: "insideBottom", dy: 10 }} />
+          <XAxis dataKey="" label={{ value: "", position: "insideBottom", dy: 10 }} />
           <YAxis label={{ value: "", angle: -90, position: "insideLeft" }} />
           <Tooltip />
           <Legend verticalAlign="top" height={36} />

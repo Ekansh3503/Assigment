@@ -1,119 +1,281 @@
-.leaderboard {
-    margin: 20px auto;
-    max-width: 600px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navbar - Fixed at the top */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #4caf50;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Leaderboard Container */
+.leaderboard-container {
+  display: flex;
+  margin-top: 60px; /* Leaves space for the fixed Navbar */
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Rank Table */
+.rank-table {
+  flex: 1; /* Takes 1/3 of the space */
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.rank-table h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.rank-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rank-table th,
+.rank-table td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.rank-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.rank-table td {
+  font-size: 14px;
+  color: #333;
+}
+
+.rank-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.rank-table tr:hover {
+  background-color: #e8f5e9;
+}
+
+/* Performance Container */
+.performance-container {
+  flex: 2; /* Takes 2/3 of the space */
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+/* Performance Box */
+.performance-box {
+  width: 100%; /* Fill parent container */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.performance-box h2 {
+  font-size: 24px;
+  color: #4caf50;
+  /* margin-bottom: 20px; */
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always show 3 items per row */
+  /* gap: 15px; */
+}
+
+.performance-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.performance-item:hover {
+  background: #e8f5e9;
+}
+
+.performance-item .label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.performance-item .value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Performance Graph */
+.performance-graph {
+  width: 100%; /* Fill parent container */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.performance-graph h2 {
+  font-size: 24px;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+td {
+  font-size: 14px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .leaderboard-container {
+    flex-direction: column;
   }
-  
-  .top-traders {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .top-traders h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .top-traders p {
-    text-align: center;
-    color: #666;
+
+  .rank-table {
     margin-bottom: 20px;
   }
-  
-  /* Table Styles */
+
+  .performance-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid to 2 columns */
+  }
+
   table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: #fff;
+    font-size: 12px;
   }
-  
-  th, td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-  }
-  
+
+  th,
   td {
-    font-size: 14px;
-    color: #333;
+    padding: 8px;
   }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
+
+  h1 {
+    font-size: 1.5em;
   }
-  
-  tr:hover {
-    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 480px) {
+  .performance-grid {
+    grid-template-columns: 1fr; /* Adjust grid to 1 column */
   }
-  
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .top-traders {
-      padding: 10px;
-    }
-  
-    table {
-      font-size: 12px;
-    }
-  
-    th, td {
-      padding: 8px;
-    }
-  
-    h1 {
-      font-size: 1.5em;
-    }
+
+  table {
+    font-size: 10px;
   }
-  
-  @media screen and (max-width: 480px) {
-    table {
-      font-size: 10px;
-    }
-  
-    th, td {
-      padding: 6px;
-    }
-  
-    h1 {
-      font-size: 1.2em;
-    }
+
+  th,
+  td {
+    padding: 6px;
   }
-  
+
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+/* Rank Table */
+.rank-table {
+  flex: 1; /* Takes 1/3 of the space */
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rank-table h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+/* Table Container - Enable horizontal scrolling */
+.rank-table .table-container {
+  overflow-x: auto; /* Enable horizontal scrolling if the table exceeds width */
+  flex: 1; /* Take available space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%; /* Make the table fill the available height */
+}
+
+th,
+td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  font-size: 14px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e8f5e9;
+}

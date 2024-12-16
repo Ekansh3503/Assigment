@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import tradesData from '../trades.json';  // Import JSON directly
+import React from 'react';
 import './CSS/TradesTable.css';  // Adjust path if necessary
 
-// This component maps the JSON data and displays it in a table.
-const TradesTable = () => {
-  const [trades, setTrades] = useState([]);
-
-  // Set the imported JSON data directly to state
-  useEffect(() => {
-    setTrades(tradesData);
-  }, []);
-
+const TradesTable = ({ traderName, tradesData }) => {
   return (
-    <div>
-      <h1>Trades Table</h1>
+    <div className="trades-table-container">
+      <h1>{traderName} - Trading Log</h1>
       <table>
         <thead>
           <tr>
@@ -31,7 +22,7 @@ const TradesTable = () => {
         </thead>
         <tbody>
           {/* Map through the trades data */}
-          {trades.map((trade, index) => (
+          {tradesData.map((trade, index) => (
             <tr key={index}>
               <td>{trade.openTime}</td>
               <td>{trade.symbol}</td>
@@ -52,4 +43,6 @@ const TradesTable = () => {
 };
 
 export default TradesTable;
+
+
 
