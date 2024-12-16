@@ -61,3 +61,50 @@
     }
   }
   
+  .performance-box {
+    max-width: 300px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .performance-box h2 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+  }
+  
+  /* Grid Layout for Performance Items */
+  .performance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .performance-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .performance-item:hover {
+    background: #e8f5e9;
+  }
+  
+  .label {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
