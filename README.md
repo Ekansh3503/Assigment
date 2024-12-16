@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# FunderPro Leaderboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project displays a leaderboard with the top traders, showcasing their performance data, trading logs, and more. The leaderboard is interactive, where users can select a trader to view their detailed performance data, including their trades and performance graph.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Leaderboard**: Displays the top traders, including their rank, return percentage, and profit.
+- **Trader's Performance**: View detailed performance data of the selected trader, including cumulative profit, return percentage, and trading statistics.
+- **Trades Log**: Display all trades performed by the selected trader.
+- **Performance Graph**: View a graphical representation of the trader's performance over time.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: The core framework for building the user interface.
+- **CSS**: Custom styling for layout and responsiveness.
+- **React Hooks**: Used for state management (`useState`, `useEffect`).
+- **Recharts**: Library used to visualize the performance graph.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone this repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/PraptiTeredesa/leaderboard.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd leaderboard
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. Run the application:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   This will start the development server and open the application in your default browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Leaderboard
+The main page displays a leaderboard of the top traders. Click on any trader's name or rank to view their performance and trading log.
 
-## Learn More
+### 2. Performance Data
+Once a trader is selected, you will see their **Performance Box** with detailed metrics, such as:
+- Starting balance
+- Current equity and balance
+- Cumulative profit/loss
+- Return percentage
+- Active days
+- Profit factor
+- Average winning trade
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Trading Log
+You will also be able to view the trader's **Trading Log**, showing all the trades they’ve made, including:
+- Open time and close time
+- Symbol and position ID
+- Trade type (BUY/SELL)
+- Volume and prices
+- Profit and percentage change for each trade
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Performance Graph
+The **Performance Graph** visually represents the trader's performance over time, showing the balance and equity progression.
 
-### Code Splitting
+- **Navbar.jsx**: Contains the navigation bar component.
+- **PerformanceBox.jsx**: Displays performance data of the selected trader.
+- **PerformanceGraph.jsx**: Displays the performance graph for the selected trader.
+- **TradesTable.jsx**: Displays the trading log for the selected trader.
+- **Leaderboard.jsx**: Contains the main leaderboard page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+1. Fork the repository.
+2. Create your branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to your branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
